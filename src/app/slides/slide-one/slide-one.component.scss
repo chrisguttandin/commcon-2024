@@ -1,0 +1,31 @@
+h1 {
+    text-align: center;
+}
+
+a {
+    color: #fff;
+    display: block;
+    text-align: center;
+}
+
+.duplicate {
+    display: inline-block;
+    position: relative;
+
+    &::after,
+    &::before {
+        content: attr(data-content);
+        left: 0;
+        position: absolute;
+    }
+
+    &::after {
+        opacity: 0.5;
+        top: 15%;
+    }
+
+    &::before {
+        opacity: 0.3;
+        top: 30%;
+    }
+}
