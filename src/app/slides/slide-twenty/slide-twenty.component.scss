@@ -1,0 +1,48 @@
+button {
+    display: block;
+    font-size: 35%;
+    height: 4vw;
+    width: 16vw;
+}
+
+input {
+    height: 4vw;
+    margin: 0 1vw 0 0;
+    vertical-align: middle;
+    width: 4vw;
+}
+
+hr {
+    border: 0.2vw solid #999;
+    margin: 2vw 0;
+}
+
+label,
+span {
+    display: block;
+    font-size: 50%;
+    margin: 2vw 0;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    button {
+        height: calc(4vh * 16 / 9);
+        width: calc(16vh * 16 / 9);
+    }
+
+    input {
+        height: calc(4vh * 16 / 9);
+        margin: 0 calc(1vh * 16 / 9) 0 0;
+        width: calc(4vh * 16 / 9);
+    }
+
+    hr {
+        border: calc(0.2vh * 16 / 9) solid #999;
+        margin: calc(2vh * 16 / 9) 0;
+    }
+
+    label,
+    span {
+        margin: calc(2vh * 16 / 9) 0;
+    }
+}

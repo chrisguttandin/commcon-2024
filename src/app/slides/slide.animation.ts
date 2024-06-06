@@ -1,7 +1,5 @@
 import { animate, animation, group, query, style } from '@angular/animations';
 
-// @todo For some reason the objects which define the styles can't be composed when using AoT.
-
 export const slideAnimation = animation([
     group([
         query(

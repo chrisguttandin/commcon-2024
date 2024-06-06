@@ -3,7 +3,7 @@ import { expect, test } from '@playwright/test';
 
 test.use({ viewport: { height: 1080, width: 1920 } });
 
-for (let slide = 1; slide < 2; slide += 1) {
+for (let slide = 1; slide < 27; slide += 1) {
     test.describe(`slide ${slide}`, () => {
         let name: string;
         let path: string;

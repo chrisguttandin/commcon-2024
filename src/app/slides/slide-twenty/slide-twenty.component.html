@@ -1,0 +1,19 @@
+<h2>Play, Record, and Analyze</h2>
+<!-- eslint-disable-next-line @angular-eslint/template/no-call-expression -->
+<button (click)="play()" [disabled]="isPlaying()" type="button">play</button>
+<hr />
+<label
+    ><!-- eslint-disable @angular-eslint/template/no-call-expression --><input
+        #checkbox
+        type="checkbox"
+        (change)="isEchoCancellationChecked.set(checkbox.checked)"
+        [checked]="isEchoCancellationChecked()"
+    /><!-- eslint-enable @angular-eslint/template/no-call-expression -->enable echo cancellation</label
+>
+<!-- eslint-disable-next-line @angular-eslint/template/no-call-expression -->
+<button (click)="record()" [disabled]="recordingState() !== null" type="button">record</button>
+<hr />
+<!-- eslint-disable-next-line @angular-eslint/template/no-call-expression -->
+<button (click)="analyze()" [disabled]="recordingState() === null" type="button">analyze</button>
+<!-- eslint-disable-next-line @angular-eslint/template/no-call-expression -->
+<span>{{ result() }}</span>

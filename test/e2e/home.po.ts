@@ -7,6 +7,10 @@ export class Home {
         return this._page.locator('cco-app h1');
     }
 
+    public getSubHeadline(): Locator {
+        return this._page.locator('cco-app h2');
+    }
+
     public navigateTo(): Promise<null | Response> {
         return this._page.goto('./');
     }

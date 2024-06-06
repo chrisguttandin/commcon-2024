@@ -6,6 +6,7 @@ import { mediaQueryMatch } from 'subscribable-things';
 import { WindowService } from '../window.service';
 import { slideAnimation } from './slide.animation';
 
+const EXCLUDED_FORWARD_TRANSITIONS = [5, 9, 10, 11, 14, 15, 16, 17];
 const NO_TRANSITION_PARAMS = { duration: '0s', enterTransform: 'none', leaveTransform: 'none', top: 'auto', width: 'auto' };
 
 @Component({
@@ -91,7 +92,7 @@ export class SlidesComponent implements OnDestroy, OnInit {
     }
 
     private _goToNextSlide(): void {
-        if (this._index < 1) {
+        if (this._index < 26) {
             this._router.navigate([`${this._index + 1}`], { relativeTo: this._activatedRoute });
         }
     }
@@ -111,7 +112,7 @@ export class SlidesComponent implements OnDestroy, OnInit {
 
             this._index = newIndex;
 
-            if (this._isPreferingReducedMotion) {
+            if (this._isPreferingReducedMotion || (direction === 'forwards' && EXCLUDED_FORWARD_TRANSITIONS.includes(newIndex))) {
                 this.transition = { params: NO_TRANSITION_PARAMS, value: newIndex };
             } else {
                 const nativeWindow = this._windowService.nativeWindow;

@@ -33,6 +33,37 @@ h1 {
     font-weight: 500;
 }
 
-body h1:first-child {
+h2 {
+    font-size: 80%;
+    font-weight: 500;
+}
+
+li,
+p {
+    font-size: 50%;
+}
+
+body h1:first-child,
+body h2 {
     margin-top: 0;
+}
+
+ul {
+    margin: 0.5em 0;
+    padding: 0 0 0 0.5em;
+}
+
+li {
+    margin: 0.5em 0;
+}
+
+.footnote {
+    color: #999;
+    display: block;
+    font-size: 30%;
+    margin: 2% auto 0;
+}
+
+li a {
+    color: inherit;
 }

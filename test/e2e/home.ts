@@ -40,3 +40,11 @@ test('should display the correct headline', async () => {
 test('should go to the first slide', async ({ page }) => {
     await expect(page).toHaveURL(/\/slides\/1$/);
 });
+
+test('should go to the next slide', async ({ page }) => {
+    await page.waitForURL(/\/slides\/1$/);
+    await page.keyboard.press('ArrowRight');
+    await page.waitForURL(/\/slides\/2$/);
+
+    await expect(home.getSubHeadline()).toHaveText("Hi, I'm Christoph Guttandin");
+});

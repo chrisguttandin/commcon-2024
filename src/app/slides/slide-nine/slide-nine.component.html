@@ -1,0 +1,24 @@
+<h2>Software Fix</h2>
+<div class="stage">
+    <svg class="stage-prop" version="1.1" viewBox="0 0 900 340">
+        <text alignment-baseline="central" class="label" dominant-baseline="mathematical" fill="#F2F2F8" text-anchor="left" x="0" y="11">
+            input with feedback
+        </text>
+
+        @for (point of input; track point.x) {
+            <circle [attr.cx]="point.x" [attr.cy]="point.y" fill="#666" stroke="none" r="1"></circle>
+        }
+
+        @for (point of inputWithFeedback; track point.x) {
+            <circle [attr.cx]="point.x" [attr.cy]="point.y" fill="#eb3f0f" stroke="none" r="1"></circle>
+        }
+
+        <text alignment-baseline="central" class="label" dominant-baseline="mathematical" fill="#F2F2F8" text-anchor="left" x="0" y="211">
+            output phase inverted
+        </text>
+
+        @for (point of output; track point.x) {
+            <circle [attr.cx]="point.x" [attr.cy]="point.y" fill="#eb3f0f" stroke="none" r="1"></circle>
+        }
+    </svg>
+</div>
