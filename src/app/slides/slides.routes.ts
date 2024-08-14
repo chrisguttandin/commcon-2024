@@ -1,5 +1,4 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 import { SlideTwentySixComponent } from './slide-twenty-six/slide-twenty-six.component';
 import { SlideTwentyFiveComponent } from './slide-twenty-five/slide-twenty-five.component';
 import { SlideTwentyFourComponent } from './slide-twenty-four/slide-twenty-four.component';
@@ -28,7 +27,7 @@ import { SlideFourComponent } from './slide-four/slide-four.component';
 import { SlideFiveComponent } from './slide-five/slide-five.component';
 import { SlidesComponent } from './slides.component';
 
-const routes: Routes = [
+export const routes: Routes = [
     {
         children: [
             {
@@ -144,9 +143,3 @@ const routes: Routes = [
         path: ''
     }
 ];
-
-@NgModule({
-    exports: [RouterModule],
-    imports: [RouterModule.forChild(routes)]
-})
-export class SlidesRoutingModule {}

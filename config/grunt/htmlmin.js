@@ -5,7 +5,7 @@ module.exports = {
                 cwd: 'build/commcon-2024/browser',
                 dest: 'build/commcon-2024/browser',
                 expand: true,
-                src: ['**/*.html']
+                src: ['**/404.html']
             }
         ],
         options: {
