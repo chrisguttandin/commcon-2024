@@ -83,7 +83,7 @@ export class SlideTwentyComponent {
                 }
 
                 if (this._promisedAudioBuffer === null) {
-                    this._promisedAudioBuffer = fetch('/assets/hey-i-think-you-re-muted.wav')
+                    this._promisedAudioBuffer = fetch('/assets/hey-i-think-you-re-muted-YXWJ4BEB.wav')
                         .then((response) => response.arrayBuffer())
                         .then((arrayBuffer) => audioContext.decodeAudioData(arrayBuffer));
                 }
@@ -118,7 +118,7 @@ export class SlideTwentyComponent {
         this.isPlaying.set(true);
 
         if (this._promisedAudioBuffer === null) {
-            this._promisedAudioBuffer = fetch('/assets/hey-i-think-you-re-muted.wav')
+            this._promisedAudioBuffer = fetch('/assets/hey-i-think-you-re-muted-YXWJ4BEB.wav')
                 .then((response) => response.arrayBuffer())
                 .then((arrayBuffer) => audioContext.decodeAudioData(arrayBuffer));
         }
