@@ -5,7 +5,6 @@ import { PrismComponent } from '../prism/prism.component';
     changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [PrismComponent],
     selector: 'cco-slide-eleven',
-    standalone: true,
     styleUrls: ['./slide-eleven.component.scss'],
     templateUrl: './slide-eleven.component.html'
 })
