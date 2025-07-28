@@ -51,7 +51,6 @@ const computeCrossCorrelation = (xSignal: Float32Array, ySignal: Float32Array, x
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
     selector: 'cco-slide-twenty',
-    standalone: true,
     styleUrls: ['./slide-twenty.component.scss'],
     templateUrl: './slide-twenty.component.html'
 })
